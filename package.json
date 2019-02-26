@@ -9,7 +9,8 @@
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
     "lint": "eslint ./src/ --ext .ts,.tsx,.js,.jsx",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage --collectCoverageFrom=src/**/*.{ts,tsx,js,jsx} --collectCoverageFrom=!src/**/*.stories.{ts,tsx,js,jsx}"
   },
   "sideEffects": [
     "./src/legacy/*.js"
@@ -35,6 +36,7 @@
     "@types/jest": "^24.0.9",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
+    "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.4",
     "clean-webpack-plugin": "^1.0.1",
     "eslint": "^5.14.1",
@@ -82,9 +84,9 @@
     ],
     "extends": [
       "plugin:@typescript-eslint/recommended",
+      "plugin:react/recommended",
       "prettier",
-      "prettier/@typescript-eslint",
-      "plugin:react/recommended"
+      "prettier/@typescript-eslint"
     ],
     "settings": {
       "react": {
@@ -102,5 +104,10 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts", "tsx", "js", "json", "jsx", "node"
+    ]
   }
 }

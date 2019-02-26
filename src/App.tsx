@@ -4,7 +4,7 @@ let test: string;
 test = 'world';
 
 interface Props {
-  foo: string
+  foo?: string
 }
 
 export const App: React.FunctionComponent<Props> = () => <div>Hello {test}!</div>;

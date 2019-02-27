@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "useBuiltIns": "entry",
+        "targets": [
+          ">0.2%",
+          "not dead",
+          "not ie <= 11",
+          "not op_mini all"
+        ],
+      }
+    ],
+    "@babel/typescript",
+    "@babel/react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ]
+}

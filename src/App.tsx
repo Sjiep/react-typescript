@@ -14,25 +14,26 @@ interface State {
 
 class App extends React.Component<Props, State>{
   
-  inc = -11;
-  constructor(props: Props) {
+  private inc = -11;
+
+  public constructor(props: Props) {
     super(props);
     this.state = {
       counter: 0
     }
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     setInterval(this.increment.bind(this), 1000)
   }
 
-  increment() {
+  increment(): void {
     this.setState(({counter}) => ({
       counter: counter + this.inc
     }))
   }
   
-  render() {
+  render(): JSX.Element {
     const { counter } = this.state;
     const color = counter % 2 ? 'yellow' : 'green'
     return (

@@ -1,10 +1,12 @@
 ## TODO
 
-* Storybook
-* ESLint
+* ~~Storybook~~
+  * withInfo addon
+* ~~ESLint~~
   * eslint-loader
   * airbnb??
-  * warning  Missing return type on function  @typescript-eslint/explicit-function-return-type https://github.com/typescript-eslint/typescript-eslint/pull/260#pullrequestreview-207112262
+  * Rules:
+    * warning  Missing return type on function  @typescript-eslint/explicit-function-return-type https://github.com/typescript-eslint/typescript-eslint/pull/260#pullrequestreview-207112262
 * Styled Components 
 * MUI
 

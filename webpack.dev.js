@@ -8,5 +8,4 @@ module.exports = merge(common, {
     contentBase: './dist',
     stats: 'minimal',
   },
-
 })

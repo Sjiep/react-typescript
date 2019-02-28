@@ -7,5 +7,5 @@ storiesOf('UI|Widgets/Basics/Button', module)
     <Lemon>I'm definitely a lemon</Lemon>
   ))
   .add('Lemon with color', () => (
-    <Lemon color='green'>I'm not a lemon</Lemon>
+    <Lemon color='lightgreen'>I'm not a lemon</Lemon>
   ));

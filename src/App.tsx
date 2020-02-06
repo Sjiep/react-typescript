@@ -1,8 +1,4 @@
 import React from 'react';
-import { hot } from 'react-hot-loader/root';
-
-let test: string;
-test = 'world';
 
 interface Props {
   foo?: string
@@ -12,8 +8,8 @@ interface State {
   counter: number
 }
 
-class App extends React.Component<Props, State>{
-  
+export class App extends React.Component<Props, State>{
+
   private inc = -11;
 
   public constructor(props: Props) {
@@ -32,14 +28,12 @@ class App extends React.Component<Props, State>{
       counter: counter + this.inc
     }))
   }
-  
+
   render(): JSX.Element {
     const { counter } = this.state;
-    const color = counter % 2 ? 'yellow' : 'green'
+    const color = counter % 2 ? 'yellow' : 'green';
     return (
-      <div style={{backgroundColor: color}}>Hello {test} {counter + 100}!</div>
+      <div style={{backgroundColor: color}}>Hello {counter + 100}!</div>
     );
   }
 }
-
-export default hot(App);

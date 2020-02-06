@@ -3,21 +3,20 @@
     [
       "@babel/env",
       {
-        "useBuiltIns": "entry",
+        "useBuiltIns": "usage",
+        "corejs": 3,
         "targets": [
           ">0.2%",
           "not dead",
           "not ie <= 11",
           "not op_mini all"
-        ],
+        ]
       }
     ],
     "@babel/typescript",
     "@babel/react"
   ],
   "plugins": [
-    "babel-plugin-styled-components",
-    "react-hot-loader/babel",
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ]
